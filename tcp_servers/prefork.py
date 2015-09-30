@@ -1,5 +1,5 @@
 #!/usr/local/bin/python
-
+#такую схему как раз и использует nginx
 import os
 import socket
 import sys
