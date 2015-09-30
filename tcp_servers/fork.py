@@ -16,9 +16,9 @@ while True:
         request = client_socket.recv(1024)
         client_socket.send(request.upper())
         print '(child {}) {} : {}'.format(client_socket.getpeername(), request)
-        client_socket.close()
+        client_socket.close() #сокет мы должны закрывать в обоих процессах (тут форкнутый)
         sys.exit()
     else:
-        client_socket.close()
+        client_socket.close() #а тут не форкнутый
 
 server_socket.close()
